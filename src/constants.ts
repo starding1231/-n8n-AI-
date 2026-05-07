@@ -9,7 +9,7 @@ export const DEFAULT_CONTENT: AppState = {
       title: '업무는 AI에게, 퇴근은 당신에게',
       subtitle: '내 일의 주도권, 이제 AI가 아니라 당신이 갖습니다',
       hookLine: '복잡한 코딩 없이, 당신만의 AI 비서를 만드세요.',
-      image: '/images/regenerated_image_1777880076047.jpg',
+      image: '/images/hero_mockup.png',
     },
     problem: {
       id: 'problem',
@@ -69,7 +69,7 @@ export const DEFAULT_CONTENT: AppState = {
   seo: {
     title: '리코멘드 | 최고의 n8n AI 자동화 강의',
     description: 'n8n과 AI를 활용한 업무 자동화의 모든 것. 박정기 저자의 베스트셀러 브릿지 페이지.',
-    ogImage: '/images/regenerated_image_1777880076047.jpg',
+    ogImage: '/images/hero_mockup.png',
     keywords: 'n8n, 업무 자동화, AI, 마케팅 자동화, 노코드',
   },
 };
