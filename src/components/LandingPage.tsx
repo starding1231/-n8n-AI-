@@ -200,7 +200,7 @@ export default function LandingPage() {
               </div>
               <div className="overflow-hidden rounded-[2.5rem] border border-black/5 shadow-lg bg-gray-200 aspect-[4/3] relative">
                 <img 
-                  src="/src/assets/images/ChatGPT_Image_2026년_5월_7일_오후02_48_58.png" 
+                  src="/images/ChatGPT_Image_2026년_5월_7일_오후02_48_58.png" 
                   className="w-full h-full object-cover filter grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700"
                   referrerPolicy="no-referrer"
                 />
@@ -225,7 +225,7 @@ export default function LandingPage() {
               </div>
               <div className="overflow-hidden rounded-[2.5rem] border border-black/5 shadow-2xl bg-white aspect-[4/3] relative">
                 <img 
-                  src="/src/assets/images/ChatGPTImage2026년5월7일오후03_03_30.png" 
+                  src="/images/ChatGPTImage2026년5월7일오후03_03_30.png" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
