@@ -9,8 +9,6 @@
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
-    "deploy": "gh-pages -d build",
-    "predeploy": "npm run build"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
@@ -38,5 +36,4 @@
     "typescript": "~5.8.2",
     "vite": "^6.2.3"
   }
-  "homepage": "https://starding1231.github.io/-n8n-AI-/"
 }
