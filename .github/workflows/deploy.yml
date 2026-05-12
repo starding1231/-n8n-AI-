@@ -26,8 +26,8 @@ jobs:
           node-version: 18 # 사용자의 요청에 따라 20 대신 18 사용
       - name: Install dependencies
         run: |
-          rm -f package-lock.json
-          npm install
+          rm -rf node_modules package-lock.json
+          npm install --include=optional
       - name: Build
         run: npm run build
       - name: Setup Pages
