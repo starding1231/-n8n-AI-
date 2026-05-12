@@ -15,10 +15,10 @@ npm run deploy
 이 명령어는 프로젝트를 빌드한 후 `gh-pages` 브랜치에 자동으로 업로드합니다. 그 후 GitHub Settings > Pages에서 Source를 `gh-pages` 브랜치로 설정하면 됩니다.
 
 ### 방법 2: 터미널이나 GitHub Actions를 사용할 수 없는 경우 (수동 업로드)
-1. AI Studio (현재 화면) 하단의 Terminal에서 `npm run build`를 입력하여 `dist` 폴더를 생성합니다. (이미 생성되어 있다면 생략 가능)
-2. 왼쪽 파일 탐색기에서 `dist` 폴더 내부의 모든 파일을 다운로드합니다.
+1. AI Studio (현재 화면) 왼쪽 파일 탐색기에서 **`deploy_files`** 폴더가 보이는지 확인합니다. (보이지 않는다면 페이지를 새로고침 해보세요.)
+2. `deploy_files` 폴더 내부의 모든 파일을 다운로드합니다.
 3. 자신의 GitHub 리포지토리에 `gh-pages`라는 이름의 새로운 브랜치를 생성합니다.
-4. `gh-pages` 브랜치에 다운로드한 `dist` 폴더 안의 파일들을 **루트(최상위)**에 업로드합니다. (`dist` 폴더 자체를 올리는 것이 아니라 그 내용물만 올립니다.)
+4. `gh-pages` 브랜치에 다운로드한 `deploy_files` 폴더 안의 파일들을 **루트(최상위)**에 업로드합니다. (`deploy_files` 폴더 자체를 올리는 것이 아니라 그 내용물만 올립니다.)
 5. GitHub 리포지토리의 **Settings > Pages** 메뉴에서 **Build and deployment > Source**를 `Deploy from a branch`로 선택하고 브랜치를 `gh-pages`로 지정합니다.
 
 ### 주요 설정 정보
