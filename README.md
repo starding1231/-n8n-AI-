@@ -28,10 +28,13 @@
 
 
 ### 최근 업데이트
-- **업데이트 일시**: 2026-05-12 08:38 (이미지 경로 최적화 및 빌드 갱신)
+- **업데이트 일시**: 2026-05-13 00:07 (배포 경로 최적화 및 MIME 타입 안정성 확보)
 
-### 이미지 경로 설정
-- 모든 이미지는 `${import.meta.env.BASE_URL}images/...` 형식을 사용하여 배포 환경에서도 올바른 경로를 찾아갈 수 있도록 수정되었습니다.
+### 이미지 및 배포 설정
+- **Base URL**: `/-n8n-AI-/` (vite.config.ts)
+- **React Router**: `BrowserRouter`에 `import.meta.env.BASE_URL` 반영
+- **이미지 경로**: `${import.meta.env.BASE_URL}images/...` 패턴 적용
+- **빌드 위치**: `/docs` 폴더 (GitHub Pages 설정 필수)
 
 ## 수동 빌드 방법
 
