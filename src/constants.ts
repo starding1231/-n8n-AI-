@@ -8,12 +8,13 @@ export const DEFAULT_CONTENT: AppState = {
       badge: 'n8n AI AUTOMATION',
       title: '업무는 AI에게, 퇴근은 당신에게',
       subtitle: '내 일의 주도권, 이제 AI가 아니라 당신이 갖습니다',
-      hookLine: '복잡한 코딩 없이, 당신만의 AI 비서를 만드세요.',
+      hookLine: '복잡한 코딩 없이, 당신만의 AI 비서를 만드세요',
       image: 'images/hero_mockup.png',
       buttons: [
         { label: '최고의 강의 10% 할인가로 소장하기', url: 'https://product.kyobobook.co.kr/detail/S000219926914', type: 'primary' },
         { label: '둘러보기', url: '#problem', type: 'secondary' },
       ],
+       hookLine: '끝까지 확인하고 최고의 강의를 가장 먼저 만나는 혜택을 누리세요!',
     },
     feature: {
       id: 'feature',
