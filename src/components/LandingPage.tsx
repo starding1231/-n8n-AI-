@@ -205,6 +205,9 @@ export default function LandingPage() {
                    <span>{content.hero.buttons?.[1]?.label || "둘러보기"}</span>
                  </motion.a>
                </div>
+               <p className="mt-6 text-[30px] font-bold text-gray-400 opacity-80 break-keep">
+                 끝까지 확인하고 최고의 강의를 가장 먼저 만나는 혜택을 누리세요!
+               </p>
             </div>
           </motion.div>
         </section>
@@ -787,11 +790,21 @@ export default function LandingPage() {
           </h2>
           
           <div className="flex flex-col gap-6 sm:gap-8 w-full max-w-xl px-4">
-            {content.cta.buttons.map((btn, i) => {
-              const isPrimary = i === 0;
+              const isPrimary = btn.type === 'primary';
+              const isGift = btn.label.includes('서평단');
               return (
+                <div key={i} className="flex-1 w-full flex flex-col items-center">
+                  {isGift && (
+                    <motion.span 
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      className="text-sm sm:text-lg font-black mb-3 tracking-tight underline underline-offset-4 decoration-2"
+                      style={{ color: theme.pointColor }}
+                    >
+                      5/18까지
+                    </motion.span>
+                  )}
                 <motion.a 
-                  key={i} 
                   {...getLinkProps(btn.url)}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.95 }}
@@ -809,9 +822,14 @@ export default function LandingPage() {
                     <div className="absolute inset-0 bg-black/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                   )}
                 </motion.a>
+              </div>
               );
             })}
           </div>
+
+          <p className="mt-12 text-center text-xs sm:text-sm text-gray-400 font-medium max-w-2xl px-4 break-keep opacity-80">
+            ※서평 미작성 시 도서 및 배송 비용이 청구될 수 있으며 이후 이벤트 당첨에서 제외됩니다.
+          </p>
         </div>
       </section>
 
