@@ -19,7 +19,7 @@
 4. **Branch**를 `main`으로 선택하고, 그 옆의 폴더 드롭다운에서 **`/docs`**를 선택한 후 **Save**를 누릅니다.
 
 ### 3단계: 배포 확인
-- 배포 주소: `https://starding1231.github.io/-n8n-AI-/`
+- 배포 주소: `https://starding1231.github.io/n8n-AI/`
 - 배포 직후에 **Jekyll Error**나 **404 에러**가 난다면, GitHub에서 `docs` 폴더를 제대로 인식하지 못한 것입니다. 깃허브에 `docs` 폴더가 실제로 올라갔는지 확인해 주세요.
 
 ### 주의사항
