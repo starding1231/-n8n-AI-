@@ -210,6 +210,10 @@ export default function LandingPage() {
                    <span>{content.hero.buttons?.[1]?.label || "둘러보기"}</span>
                  </motion.a>
                </div>
+
+               <p className="mt-6 text-[30px] font-bold text-gray-400 opacity-80 break-keep">
+                 끝까지 확인하고 최고의 강의를 가장 먼저 만나는 혜택을 누리세요!
+               </p>
             </div>
           </motion.div>
         </section>
@@ -789,32 +793,48 @@ export default function LandingPage() {
             주도적인 내일을 위한 n8n,<br /> 지금 바로 시작하세요
           </h2>
           
-          <div className="flex flex-col gap-6 sm:gap-8 w-full max-w-xl px-4">
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 w-full max-w-4xl px-4 items-end">
             {content.cta.buttons?.map((btn, i) => {
-              const isPrimary = i === 0;
+              const isPrimary = btn.type === 'primary';
+              const isGift = btn.label.includes('서평단');
               return (
-                <motion.a 
-                  key={i} 
-                  {...getLinkProps(btn.url)}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={cn(
-                    "group relative px-10 py-6 sm:py-8 rounded-full font-black text-xl sm:text-3xl tracking-tighter shadow-2xl overflow-hidden text-center transition-all duration-300",
-                    isPrimary ? "text-white" : "text-gray-900 bg-white border-2"
+                <div key={i} className="flex-1 w-full flex flex-col items-center">
+                  {isGift && (
+                    <motion.span 
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      className="text-sm sm:text-lg font-black mb-3 tracking-tight underline underline-offset-4 decoration-2"
+                      style={{ color: theme.pointColor }}
+                    >
+                      5/18까지
+                    </motion.span>
                   )}
-                  style={{ 
-                    backgroundColor: isPrimary ? theme.pointColor : 'white',
-                    borderColor: isPrimary ? 'transparent' : theme.pointColor
-                  }}
-                >
-                  <span className="relative z-10">{btn.label}</span>
-                  {isPrimary && (
-                    <div className="absolute inset-0 bg-black/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-                  )}
-                </motion.a>
+                  <motion.a 
+                    {...getLinkProps(btn.url)}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={cn(
+                      "group relative w-full px-6 py-6 sm:py-8 rounded-full font-black text-xl sm:text-2xl tracking-tighter shadow-2xl overflow-hidden text-center transition-all duration-300 flex items-center justify-center select-none no-underline",
+                      isPrimary ? "text-white" : "text-gray-900 bg-white/40 backdrop-blur-md border border-black/5 hover:bg-white/60"
+                    )}
+                    style={{ 
+                      backgroundColor: isPrimary ? theme.pointColor : undefined,
+                      borderColor: isPrimary ? 'transparent' : undefined
+                    }}
+                  >
+                    <span className="relative z-10 whitespace-pre-line">{btn.label}</span>
+                    {isPrimary && (
+                      <div className="absolute inset-0 bg-black/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                    )}
+                  </motion.a>
+                </div>
               );
             })}
           </div>
+
+          <p className="mt-12 text-center text-xs sm:text-sm text-gray-400 font-medium max-w-2xl px-4 break-keep opacity-80">
+            ※서평 미작성 시 도서 및 배송 비용이 청구될 수 있으며 이후 이벤트 당첨에서 제외됩니다.
+          </p>
         </div>
       </section>
 
