@@ -210,9 +210,17 @@ export default function LandingPage() {
               <motion.p
   initial={{ opacity: 1, y: 0 }}
   animate={{ opacity: 1, y: 0 }}
-               <p className="mt-10 text-xl sm:text-2xl font-bold text-black break-keep leading-relaxed px-4">
-               끝까지 확인하고 최고의 강의를 가장 먼저 만나는 혜택을 누리세요!
-                 </motion.p>
+               <p
+  style={{
+    marginTop: '24px',
+    fontSize: '30px',
+    fontWeight: '700',
+    color: '#111',
+    lineHeight: '1.5',
+  }}
+>
+  끝까지 확인하고 최고의 강의를 가장 먼저 만나는 혜택을 누리세요!
+</p>
               </p>
             </div>
           </motion.div>
