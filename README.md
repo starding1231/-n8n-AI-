@@ -28,18 +28,35 @@
 
 
 ### 최근 업데이트
-- **업데이트 일시**: 2026-05-13 16:23 (Vite base: '/n8n-AI/' 설정 및 저장소 이름 변경 반영)
+- **업데이트 일시**: 2026-05-14 11:07 (Vite base: '/n8n-AI/' 설정 복구 및 로컬 빌드 가이드 추가)
 
 ### 이미지 및 배포 설정
-- **Base URL**: `./` (vite.config.ts - 저장소 이름에 상관없이 대처 가능한 상대 경로 설정)
+- **Base URL**: `/n8n-AI/` (vite.config.ts - 저장소 이름 `/n8n-AI`에 정확히 맞춤)
 - **React Router**: `HashRouter` 사용 (GitHub Pages 호환성 극대화)
 - **이미지 관리**: `src/assets/images`에 보관하며 React 컴포넌트에서 `import`하여 사용합니다. (Vite가 배포 환경에 맞춰 최적화된 경로를 생성합니다)
-- **빌드 위치**: `/docs` 폴더 (GitHub Pages 설정 필수)
+- **빌드 위치**: `/docs` 폴더 (GitHub Pages 설정: Branch `main`, Folder `/docs` 필수)
 
-## 수동 빌드 방법
+### 로컬 빌드 및 배포 방법 (Troubleshooting)
+GitHub Pages 404 오류나 빌드 오류가 발생할 경우 다음 순서로 진행하세요:
 
+1. **저장소 이름 확인**: 현재 설정은 저장소 이름이 `n8n-AI`인 것을 가정합니다. 만약 이름이 다르다면 `vite.config.ts`의 `base` 설정을 변경해야 합니다.
+2. **로컬 빌드 에러 시**:
+   ```bash
+   # 기존 모듈 제거
+   rm -rf node_modules package-lock.json
+   # 다시 설치 (Clean Install)
+   npm install
+   # 빌드 실행
+   npm run build
+   ```
+3. **배포 확인**: 빌드 후 생성된 `docs` 폴더의 모든 내용을 GitHub에 push한 뒤, `Settings > Pages`에서 배포가 완료될 때까지(약 1~2분) 기다리세요.
+
+### 개발 및 빌드 명령어
 ```bash
-npm install
+# 개발 서버 실행
+npm run dev
+
+# 프로덕션 빌드 (docs 폴더 생성)
 npm run build
 ```
 
