@@ -69,6 +69,7 @@ export const DEFAULT_CONTENT: AppState = {
     cta: {
       headline: '더이상 업무에 끌려 다니지 마세요',
       buttons: [
+        { label: '서평단 신청하고\n최고의 강의 맛보기', url: 'https://www.instagram.com/p/DYRdcH_GEeH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', type: 'secondary' },
         { label: '지금 바로 나만의 ai 비서 만들기', url: 'https://product.kyobobook.co.kr/detail/S000219926914', type: 'primary' },
       ],
       footerText: 'ⓒ 2026. 리코멘드 All rights reserved.',
